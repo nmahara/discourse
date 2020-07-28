@@ -32,7 +32,9 @@ Discourse::Application.configure do
       user_name: GlobalSetting.smtp_user_name,
       password: GlobalSetting.smtp_password,
       authentication: GlobalSetting.smtp_authentication,
-      enable_starttls_auto: GlobalSetting.smtp_enable_start_tls
+      enable_starttls_auto: GlobalSetting.smtp_enable_start_tls,
+      tls: true,
+      ssl: true
     }
 
     settings[:openssl_verify_mode] = GlobalSetting.smtp_openssl_verify_mode if GlobalSetting.smtp_openssl_verify_mode
